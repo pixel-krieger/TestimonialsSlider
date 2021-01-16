@@ -3,63 +3,71 @@ body{
     /* font-size: 32px; */
     color: hsl(240, 38%, 20%);
 }
-.card{
+.carousel .slide.active{
+    display: block;
+}
+.carousel .slide{
+    display: none;
     margin: 0 auto;
     max-width: 250px;
     background-color: powderblue;
 }
-.card .image-and-controls{
+.carousel .slide .container-1{
     padding: 1.5em;
     background: url('../images/pattern-bg.svg');
     background-size: contain;
     background-repeat: no-repeat;
 }
-.card .image-and-controls .container{
+.carousel .slide .container-1 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.card .image-and-controls .user-picture{
+.carousel .slide .container-1 .user-picture{
     max-width: 200px;
     height: auto;
 }
-.card .image-and-controls .controls{
+.carousel .slide .container-1 .controls{
     width: fit-content;
     margin-top: -1em;
     padding: 4px 2px;
     border-radius: 20px;
     background-color: #ffffff;
 }
-.card .image-and-controls .controls button{
+.carousel .slide .container-1 .controls button{
     border: none;
     background-color: transparent;
 }
-.card .image .controls button img{
+.carousel .slide .image .controls button img{
     height: 1em;
 }
 
-.card .testimonial{
+.carousel .slide .container-2{
     background-image: url('../images/pattern-quotes.svg');
     background-repeat: no-repeat;
     background-position: top;
     text-align: center;
 }
-.card .testimonial blockquote{
+.carousel .slide .container-2 blockquote{
     font-weight: 500;
 }
-.card .testimonial span{
+.carousel .slide .container-2 span{
     display: block;
+    font-size: 0.8em;
 }
-.card .testimonial .user-name{
+.carousel .slide .container-2 .user-name{
     font-weight: 700;
 }
-.card .testimonial .user-ocup{
+.carousel .slide .container-2 .user-ocup{
     font-weight: 300;
     color: hsl(240, 18%, 77%);
 }
-.card .testimonial::after{
+.carousel .slide .container-2::after{
     display: block;
     box-sizing: border-box;
-    content: url('../images/pattern-curve.svg');
-    width: 60px;
+    content: '';
+    height: 50px;
+    background-image: url('../images/pattern-curve.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
