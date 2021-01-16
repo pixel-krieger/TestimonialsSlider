@@ -1,0 +1,65 @@
+body{
+    font-family: Inter;
+    /* font-size: 32px; */
+    color: hsl(240, 38%, 20%);
+}
+.card{
+    margin: 0 auto;
+    max-width: 250px;
+    background-color: powderblue;
+}
+.card .image-and-controls{
+    padding: 1.5em;
+    background: url('../images/pattern-bg.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.card .image-and-controls .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card .image-and-controls .user-picture{
+    max-width: 200px;
+    height: auto;
+}
+.card .image-and-controls .controls{
+    width: fit-content;
+    margin-top: -1em;
+    padding: 4px 2px;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+.card .image-and-controls .controls button{
+    border: none;
+    background-color: transparent;
+}
+.card .image .controls button img{
+    height: 1em;
+}
+
+.card .testimonial{
+    background-image: url('../images/pattern-quotes.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    text-align: center;
+}
+.card .testimonial blockquote{
+    font-weight: 500;
+}
+.card .testimonial span{
+    display: block;
+}
+.card .testimonial .user-name{
+    font-weight: 700;
+}
+.card .testimonial .user-ocup{
+    font-weight: 300;
+    color: hsl(240, 18%, 77%);
+}
+.card .testimonial::after{
+    display: block;
+    box-sizing: border-box;
+    content: url('../images/pattern-curve.svg');
+    width: 60px;
+}
