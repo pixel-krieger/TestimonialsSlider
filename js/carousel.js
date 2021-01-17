@@ -7,11 +7,22 @@ function findCurrentSlide(btnNode){
 }
 function nextSlide(event){
     var currentSlide = findCurrentSlide(event.currentTarget);
+    var nextSlide = currentSlide.nextElementSibling;
     currentSlide.classList.remove("active");
-    currentSlide.nextElementSibling.classList.add("active");
+    if (nextSlide!==null){
+        nextSlide.classList.add("active");
+    } else {
+        currentSlide.parentElement.firstElementChild.classList.add("active");
+    }
 }
 function previousSlide(event){
     var currentSlide = findCurrentSlide(event.currentTarget);
+    var previousSlide = currentSlide.previousElementSibling;
     currentSlide.classList.remove("active");
-    currentSlide.previousElementSibling.classList.add("active");
+    if (previousSlide!==null){
+        previousSlide.classList.add("active");
+    } else {
+        currentSlide.parentElement.lastElementChild.classList.add("active");
+    }
+    
 }

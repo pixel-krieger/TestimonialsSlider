@@ -1,15 +1,19 @@
 body{
     font-family: Inter;
-    /* font-size: 32px; */
+    font-size: 18px;
     color: hsl(240, 38%, 20%);
+    margin: 0;
 }
+
+/* .carousel .slide{
+    padding: 1.5em;
+} */
 .carousel .slide.active{
     display: block;
 }
 .carousel .slide{
     display: none;
-    margin: 0 auto;
-    max-width: 250px;
+    max-width: 375px;
     background-color: powderblue;
 }
 .carousel .slide .container-1{
@@ -24,7 +28,8 @@ body{
     align-items: center;
 }
 .carousel .slide .container-1 .user-picture{
-    max-width: 200px;
+    display: block;
+    max-width: 95%;
     height: auto;
 }
 .carousel .slide .container-1 .controls{
