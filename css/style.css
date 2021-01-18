@@ -6,7 +6,7 @@ body{
 }
 
 /* .carousel .slide{
-    padding: 1.5em;
+    padding: 1.5em 1.5em 0 1.5em;
 } */
 .carousel .slide.active{
     display: block;
@@ -38,6 +38,7 @@ body{
     padding: 4px 2px;
     border-radius: 20px;
     background-color: #ffffff;
+    box-shadow: 0 1.5px 15px hsl(240, 38%, 20%);
 }
 .carousel .slide .container-1 .controls button{
     border: none;
@@ -54,6 +55,7 @@ body{
     text-align: center;
 }
 .carousel .slide .container-2 blockquote{
+    margin: 1.5em;
     font-weight: 500;
 }
 .carousel .slide .container-2 span{
@@ -72,7 +74,15 @@ body{
     box-sizing: border-box;
     content: '';
     height: 50px;
+    margin-top: 10px;
     background-image: url('../images/pattern-curve.svg');
     background-size: cover;
     background-repeat: no-repeat;
+}
+@media screen and (min-width: 750px){
+    .carousel .slide.active{
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 750px;
+    }
 }
